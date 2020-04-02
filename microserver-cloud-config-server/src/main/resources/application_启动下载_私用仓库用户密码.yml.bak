@@ -1,0 +1,19 @@
+server:
+  port: 8080
+spring:
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://gitee.com/lyliu/spring-config-cloud-learning
+          repos:
+            simple: https://gitee.com/lyliu/simple
+            special:
+              pattern: special*/dev* , special*/test*   # 模式匹配只能匹配到这些配置的文件，default就不能选中到
+              cloneOnStart: true    #请求开始就下载配置文件
+              uri: https://gitee.com/lyliu/special.git
+          clone-on-start: true
+#          username: xxx  #私用仓库需要用户密码
+#          password: xxx
+  application:
+    name: microserver-cloud-config-server

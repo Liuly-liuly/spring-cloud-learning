@@ -1,0 +1,36 @@
+server:
+  port: 8770
+spring:
+  application:
+    name: microserver-loadbalance-movie-ribbon
+eureka:
+  client:
+    service-url:
+      defaultZone: http://user:123@localhost:8761/eureka
+  instance:
+    prefer-ip-address: true
+    appname: microserver-loadbalance-movie-ribbon        # microserver-provider-movie     # 此处是server id也就是微服务的应用名称
+    instance-id: ${spring.application.name}:${spring.cloud.client.ipAddress}:${spring.application.instance_id:${server.port}}
+
+# ribbon在不需要eureka的情况下得处理；因为eureka这个包包含了ribbon的包
+#  这里我们需要把它禁用，然后在自定义一个listOfServers:这个属性来定义请求的服务提供者。
+
+#ribbon:
+ # eureka:
+  #  enabled: false
+ 
+
+# 此处采用配置的文件来配置ribbon的负载均衡，可以通过ribbon实现的IRULE规则实现的子类去处理；配置的哦优先级会大于代码
+#microserver-provider-user:
+ # ribbon:
+  #  listOfServers: http://localhost:8760, http://localhost:8770  # 这里可以写多个服务提供者，就可以进行均衡。
+   # NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule
+    
+  
+
+
+
+   
+
+  
+    

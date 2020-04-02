@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="microserer-gateway-zuul" />
+        <module name="microserver-cloud-config-client" />
+        <module name="microserver-cloud-config-server" />
+        <module name="microserver-config-server-auth" />
+        <module name="microserver-discovery-euraka" />
+        <module name="microserver-eureka-keep-alived" />
+        <module name="microserver-eureka-with-hystrix" />
+        <module name="microserver-feign-configuration" />
+        <module name="microserver-hystrix-dashboard" />
+        <module name="microserver-hystrix-turbine" />
+        <module name="microserver-loadbalance-movie-ribbon" />
+        <module name="microserver-provider-movie" />
+        <module name="microserver-provider-user" />
+        <module name="microserver-provier-movie-feign" />
+        <module name="microserver-provier-movie-feign-with-hystrix" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="microserer-gateway-zuul" target="1.8" />
+      <module name="microserver-cloud-config-client" target="1.8" />
+      <module name="microserver-cloud-config-server" target="1.8" />
+      <module name="microserver-config-server-auth" target="1.8" />
+      <module name="microserver-discovery-euraka" target="1.8" />
+      <module name="microserver-eureka-keep-alived" target="1.8" />
+      <module name="microserver-eureka-with-hystrix" target="1.8" />
+      <module name="microserver-feign-configuration" target="1.8" />
+      <module name="microserver-hystrix-dashboard" target="1.8" />
+      <module name="microserver-hystrix-turbine" target="1.8" />
+      <module name="microserver-loadbalance-movie-ribbon" target="1.8" />
+      <module name="microserver-provider-movie" target="1.8" />
+      <module name="microserver-provider-user" target="1.8" />
+      <module name="microserver-provier-movie-feign" target="1.8" />
+      <module name="microserver-provier-movie-feign-with-hystrix" target="1.8" />
+      <module name="microserver-spring-cloud" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

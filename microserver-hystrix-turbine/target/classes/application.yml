@@ -1,0 +1,36 @@
+server:
+  port: 9020
+  
+spring:
+  application:
+    name: microserver-hystrix-turbine
+    
+eureka:
+  client:
+    service-url:
+      defaultZone: http://user:123@localhost:8761/eureka
+  instance:
+    prefer-ip-address: true
+    appname: microserver-hystrix-turbine   # 默认${spring.cloud.client.hostname} 来表示机器名
+    instance-id: ${spring.application.name}:${spring.cloud.client.ipAddress}:${spring.application.instance_id:${server.port}}
+
+turbine:
+ aggregator:
+    clusterConfig: MICROSERVER-EUREKA-WITH-HYSTRIX
+ appConfig: microserver-eureka-with-hystrix
+#turbine.instanceUrlSuffix.MICROSERVER-EUREKA-WITH-HYSTRIX: /ribbon/hystrix.stream
+
+logging:
+  level:
+    root: INFO
+    com.netflix.turbine.monitor: DEBUG
+    
+#turbine:
+# aggregator:
+#    clusterConfig: default
+# appConfig: microserver-provider-movie-feign-with-hystrix,microserver-eureka-with-hystrix
+# clusterNameExpression: "'default'"  # new String("dafault").
+ 
+
+
+ 

@@ -1,0 +1,21 @@
+server:
+  port: 9001
+spring:
+  application:
+    name: microserver-provider-movie-feign-with-hystrix
+eureka:
+  client:
+    service-url:
+      defaultZone: http://user:123@localhost:8761/eureka
+  instance:
+    prefer-ip-address: true
+    appname: microserver-provider-movie-feign-with-hystrix
+    instance-id: ${spring.application.name}:${spring.cloud.client.ipAddress}:${spring.application.instance_id:${server.port}}
+# 解决第一次请求报超时异常的方案：
+# hystrix.command.default.execution.isolation.thread.timeoutInMilliseconds: 5000
+# 或者：
+# hystrix.command.default.execution.timeout.enabled: false
+# 或者：
+# feign.hystrix.enabled: false ## 索性禁用feign的hystrix
+    
+ 

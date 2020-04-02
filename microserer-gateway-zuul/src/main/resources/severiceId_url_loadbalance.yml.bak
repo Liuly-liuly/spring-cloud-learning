@@ -1,0 +1,35 @@
+spring:
+  application:
+    name: microserver-discovery-zuul
+server:
+  port: 8740
+eureka:
+  client:
+   serviceUrl:
+      defaultZone: http://user:123@localhost:8761/eureka # 最基础的httpbasic 认证的方式的写法http://user:123@localhost:8761/eureka
+  instance:
+    prefer-ip-address: true
+    appname: microserver-discovery-zuul   # 默认${spring.cloud.client.hostname} 来表示机器名
+    instance-id: ${spring.application.name}:${spring.cloud.client.ipAddress}:${spring.application.instance_id:${server.port}}
+#zuul:
+#  ignoredServices: "*"   # *表示所有，也可以单个配置某一个服务不进行反向代理
+#  routes:
+#    microserver-provider-user: /user/** # 针对某一个服务进行路径的简化
+zuul:
+  ignoredServices: "*"
+  routes:
+    users:
+      path: /myuser/**
+      service-id: microserver-provider-user  # 这里可以是url指定某一个微服务的地址例如：url: http://locahost:7960,不会放在hystrix中执行，也不会用ribbon负载均衡  
+ 
+# 这里可以使用ribbon without eureka 的情况可以进行负载均衡；例如
+
+ribbon:
+  eureka:
+    enabled: false
+microserver-provider-user:
+  ribbon:
+    listOfServers: http://localhost:8760,http://localhost:8770  # 这里可以写多个服务提供者，就可以进行均衡。
+    NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule
+  
+     

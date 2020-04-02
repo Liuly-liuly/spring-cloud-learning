@@ -1,0 +1,36 @@
+server:
+  port: 8760
+spring:
+  jpa:
+    generate-ddl: false
+    show-sql: true
+    hibernate:
+      ddl-auto: none
+  datasource:
+    platform: h2
+    schema: classpath:schema.sql
+    data: classpath:data.sql
+  application:
+    name: microserver-provider-user   # microserver-provider-user-v2 v2是版本号为了测试zuul网关的
+logging:
+  level:
+    root: INFO
+    org.hibernate: INFO
+    org.hibernate.type.descriptor.sql.BasicBinder: TRACE
+    org.hibernate.type.descriptor.sql.BasicExtractor: TRACE
+    com.liuly: DEBUG
+eureka:
+  client:
+    service-url:
+      defaultZone: http://user:123@localhost:8761/eureka
+  instance:
+    prefer-ip-address: true
+    appname: microserver-provider-user   # 默认${spring.cloud.client.hostname} 来表示机器名
+    instance-id: ${spring.application.name}:${spring.cloud.client.ipAddress}:${spring.application.instance_id:${server.port}}
+    metadata-map:
+      zone: abc
+      region: kkk
+      function: cloud
+      shift: td
+      count: fg
+#    lease-renewal-interval-in-seconds: 30 #默认30 s的值，但是不要使用

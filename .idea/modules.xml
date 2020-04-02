@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/microserer-gateway-zuul/microserer-gateway-zuul.iml" filepath="$PROJECT_DIR$/microserer-gateway-zuul/microserer-gateway-zuul.iml" />
+      <module fileurl="file://$PROJECT_DIR$/microserver-cloud-config-client/microserver-cloud-config-client.iml" filepath="$PROJECT_DIR$/microserver-cloud-config-client/microserver-cloud-config-client.iml" />
+      <module fileurl="file://$PROJECT_DIR$/microserver-cloud-config-server/microserver-cloud-config-server.iml" filepath="$PROJECT_DIR$/microserver-cloud-config-server/microserver-cloud-config-server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/microserver-config-server-auth/microserver-config-server-auth.iml" filepath="$PROJECT_DIR$/microserver-config-server-auth/microserver-config-server-auth.iml" />
+      <module fileurl="file://$PROJECT_DIR$/microserver-discovery-euraka/microserver-discovery-euraka.iml" filepath="$PROJECT_DIR$/microserver-discovery-euraka/microserver-discovery-euraka.iml" />
+      <module fileurl="file://$PROJECT_DIR$/microserver-eureka-keep-alived/microserver-eureka-keep-alived.iml" filepath="$PROJECT_DIR$/microserver-eureka-keep-alived/microserver-eureka-keep-alived.iml" />
+      <module fileurl="file://$PROJECT_DIR$/microserver-eureka-with-hystrix/microserver-eureka-with-hystrix.iml" filepath="$PROJECT_DIR$/microserver-eureka-with-hystrix/microserver-eureka-with-hystrix.iml" />
+      <module fileurl="file://$PROJECT_DIR$/microserver-feign-configuration/microserver-feign-configuration.iml" filepath="$PROJECT_DIR$/microserver-feign-configuration/microserver-feign-configuration.iml" />
+      <module fileurl="file://$PROJECT_DIR$/microserver-hystrix-dashboard/microserver-hystrix-dashboard.iml" filepath="$PROJECT_DIR$/microserver-hystrix-dashboard/microserver-hystrix-dashboard.iml" />
+      <module fileurl="file://$PROJECT_DIR$/microserver-hystrix-turbine/microserver-hystrix-turbine.iml" filepath="$PROJECT_DIR$/microserver-hystrix-turbine/microserver-hystrix-turbine.iml" />
+      <module fileurl="file://$PROJECT_DIR$/microserver-loadbalance-movie-ribbon/microserver-loadbalance-movie-ribbon.iml" filepath="$PROJECT_DIR$/microserver-loadbalance-movie-ribbon/microserver-loadbalance-movie-ribbon.iml" />
+      <module fileurl="file://$PROJECT_DIR$/microserver-provider-movie/microserver-provider-movie.iml" filepath="$PROJECT_DIR$/microserver-provider-movie/microserver-provider-movie.iml" />
+      <module fileurl="file://$PROJECT_DIR$/microserver-provider-user/microserver-provider-user.iml" filepath="$PROJECT_DIR$/microserver-provider-user/microserver-provider-user.iml" />
+      <module fileurl="file://$PROJECT_DIR$/microserver-provier-movie-feign/microserver-provier-movie-feign.iml" filepath="$PROJECT_DIR$/microserver-provier-movie-feign/microserver-provier-movie-feign.iml" />
+      <module fileurl="file://$PROJECT_DIR$/microserver-provier-movie-feign-with-hystrix/microserver-provier-movie-feign-with-hystrix.iml" filepath="$PROJECT_DIR$/microserver-provier-movie-feign-with-hystrix/microserver-provier-movie-feign-with-hystrix.iml" />
+      <module fileurl="file://$PROJECT_DIR$/microserver-spring-cloud.iml" filepath="$PROJECT_DIR$/microserver-spring-cloud.iml" />
+    </modules>
+  </component>
+</project>

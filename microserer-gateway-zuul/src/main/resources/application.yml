@@ -1,0 +1,30 @@
+spring:
+  application:
+    name: microserver-discovery-zuul
+server:
+  port: 8740
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://user:123@localhost:8761/eureka # 最基础的httpbasic 认证的方式的写法http://user:123@localhost:8761/eureka
+  instance:
+    prefer-ip-address: true
+    appname: microserver-discovery-zuul   # 默认${spring.cloud.client.hostname} 来表示机器名
+    instance-id: ${spring.application.name}:${spring.cloud.client.ipAddress}:${spring.application.instance_id:${server.port}}
+#zuul:
+#  prefix: /simple
+#  strip-prefix: false
+#  ignored-patterns:  /**/admin/**  # 忽略某些路径
+
+
+#logging:
+#  level:
+#    com.netflix: debug
+
+#chunked 表示分块，可以回显数据
+# curl -v -H "Transfer -Encoding:chunked:" -F "file=@lager.zip" localhost:9999/zuul/simple/upload
+# 用来在上传文件在请求上需加上 /zuul前缀进行上传 可能会出现超时机制的错误提示需配置
+#hystrix.command.default.execution.isolation.thread.timeoutInMilliseconds: 60000
+#ribbon:
+#  ConnectTimeout: 3000
+#  ReadTimeout: 60000

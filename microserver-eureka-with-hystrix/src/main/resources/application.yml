@@ -1,0 +1,43 @@
+management:
+  port: 8081
+server:
+  port: 8010
+  context-path: /ribbon  #此工程的路劲
+spring:
+  application:
+    name: microserver-eureka-with-hystrix
+eureka:
+  client:
+    service-url:
+      defaultZone: http://user:123@localhost:8761/eureka
+  instance:
+    prefer-ip-address: true
+    home-page-url-path:  /ribbon  #不需要加这个路径，还可以访问监控的其他的页面
+    appname: microserver-eureka-with-hystrix        # microserver-provider-movie     # 此处是server id也就是微服务的应用名称
+    instance-id: ${spring.application.name}:${spring.cloud.client.ipAddress}:${spring.application.instance_id:${server.port}}
+    metadata-map:
+      #cluster: abc  #这里配置后，需要在turbine中clusterConfig: abc 及  clusterNameExpression: metadata['cluster']
+      management.port: 8081
+
+# ribbon在不需要eureka的情况下得处理；因为eureka这个包包含了ribbon的包
+#  这里我们需要把它禁用，然后在自定义一个listOfServers:这个属性来定义请求的服务提供者。
+
+#ribbon:
+ # eureka:
+  #  enabled: false
+ 
+
+ # 此处采用配置的文件来配置ribbon的负载均衡，可以通过ribbon实现的IRULE规则实现的子类去处理；配置的哦优先级会大于代码
+#microserver-provider-user:
+ # ribbon:
+  #  listOfServers: http://localhost:8760
+   # NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule
+    
+  
+
+
+
+   
+
+  
+    

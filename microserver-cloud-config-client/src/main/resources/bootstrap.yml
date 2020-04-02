@@ -1,0 +1,40 @@
+#spring:
+#  cloud:
+#    config:
+ #     uri: http://localhost:8082
+  #    label: master
+   #   profile: dev
+    #  username: user
+     # password: liuly
+#  application:
+ #   name: foobar
+
+# 在进行批量刷新时，两种方式，一种在git 上制定webhook 另一种就是进行端点 /bus/refresh
+# 指定某一批刷新 /bus/refresh?destination=applicationName:port 指定刷新
+
+spring:
+  cloud:
+    config:
+      discovery:
+        enabled: true
+        service-id: microserver-cloud-config-server-auth
+      username: user
+      password: liuly
+      profile: dev
+      label: master
+  application:
+    name: foobar
+    index: '${random.int}'  #这里配置为了不同的主机相同的端口进行批量刷新
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+eureka:
+  client:
+    service-url:
+      defaultZone: http://user:123@localhost:8761/eureka
+  instance:
+    prefer-ip-address: true
+    instance-id: ${spring.application.name}:${spring.cloud.client.ipAddress}:${spring.application.instance_id:${server.port}}
+

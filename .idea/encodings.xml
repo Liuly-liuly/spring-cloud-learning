@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/microserer-gateway-zuul" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/microserver-cloud-config-client" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/microserver-cloud-config-server" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/microserver-config-server-auth" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/microserver-discovery-euraka" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/microserver-eureka-keep-alived" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/microserver-eureka-with-hystrix" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/microserver-feign-configuration" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/microserver-hystrix-dashboard" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/microserver-hystrix-turbine" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/microserver-loadbalance-movie-ribbon" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/microserver-provider-movie" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/microserver-provider-user" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/microserver-provier-movie-feign" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/microserver-provier-movie-feign-with-hystrix" charset="UTF-8" />
+    <file url="file://$USER_HOME$/Documents/sql温习.sql" charset="GBK" />
+  </component>
+</project>

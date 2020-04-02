@@ -1,0 +1,13 @@
+server:
+  port: 8080
+spring:
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://gitee.com/lyliu/spring-config-cloud-learning
+          search-paths: foo*,bar*  # 这里还可以用通配符 '{application}' 表示一个工程请求的git仓库的某一个目录
+#             - foo  # 去Git仓库这个目录中找
+#             - bar
+  application:
+    name: microserver-cloud-config-server

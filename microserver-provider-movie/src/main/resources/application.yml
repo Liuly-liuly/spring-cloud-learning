@@ -1,0 +1,13 @@
+server:
+  port: 8770
+spring:
+  application:
+    name: microserver-provider-movie
+eureka:
+  client:
+    service-url:
+      defaultZone: http://user:123@localhost:8761/eureka
+  instance:
+    prefer-ip-address: true
+    appname: microserver-provider-movie
+    instance-id: ${spring.application.name}:${spring.cloud.client.ipAddress}:${spring.application.instance_id:${server.port}}

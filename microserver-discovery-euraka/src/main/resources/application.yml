@@ -1,0 +1,25 @@
+security:
+  basic:
+    enabled: true
+  user:
+    name: user
+    password: 123
+server:
+  port: 8761
+eureka:
+  client:
+    healthcheck:  # 健康检查只能放入application中！！！
+     enabled: true # 依靠actuator包 监管程序的状态和程序的健康检测 Netflix 1.1 版本后
+    register-with-eureka: false
+    fetch-registry: false
+    serviceUrl:
+      defaultZone: http://user:123@localhost:8761/eureka # 最基础的httpbasic 认证的方式的写法http://user:123@localhost:8761/eureka
+  server:
+    response-cache-update-interval-ms: 500
+    eviction-interval-timer-in-ms: 20000
+    #wait-time-in-ms-when-sync-empty: 500
+
+eureka.environment: product    
+eureka.datacenter: cloud
+
+# 关于 eureka.instance.dataCenterInfo 的用法？查查官方文档
